@@ -1,0 +1,6 @@
+NEI <- readRDS("summarySCC_PM25.rds")
+SCC <- readRDS("Source_Classification_Code.rds")
+head(NEI)
+Head(SCC)
+totemissions<-tapply(NEI$Emissions,NEI$year,sum)
+barplot(totemissions,xlab = "Years", ylab="Total Emissions")
